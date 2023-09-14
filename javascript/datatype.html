@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes: JS</title>
+    <script src="datatype.js"></script>
+
+    <script>
+        function addValue() {
+            var value1 = document.getElementById('firstValue').value;
+            var value2 = document.getElementById('secondValue').value;
+            
+            var value3 = (parseInt(value1) + parseInt(value2));
+            document.getElementById('result').innerHTML = value3
+        }
+    </script>
+</head>
+<body>
+    <h1>Datatypes</h1>
+    <input type="text" id="firstValue"/>
+    <input type="text" id="secondValue"/>
+    <button onclick="addValue()">Add</button>
+    <div>Sum = <span id="result"></span></div>
+</body>
+</html>

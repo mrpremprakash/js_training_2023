@@ -1,0 +1,106 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+
+    <style>
+      .formWrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+      .container {
+        width: 400px;
+        margin: auto;
+      }
+      .form-element {
+        margin: 10px;
+      }
+      body {
+        font-size: 18px;
+      }
+/*       
+      .font18 {
+        font-size: 18px;
+      } */
+    </style>
+
+    <script>
+      const INDIA_COUNTRY_CODE = "+91";
+      function isFormValid() {
+        return false;
+      }
+      function isEmpty(str) {
+        return true;
+        return false;
+      }
+      function checkLength(str, allowCharLength) {
+        return str.length === allowCharLength;
+      }
+      function isValidEmail(str) {
+        return true;
+        return false;
+      }
+      function isValidMobileNumber(mobileNumber, countryCode) {
+        return true;
+        return true;
+      }
+
+      function highlightInvalidInput(invalidElementsObj = {}) {
+
+      }
+      highlightInvalidInput({
+        firstName: false,
+        lastName: true,
+        emailAddress: false,
+        gender: true,
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>Can not be empty</li>
+      <li>minimum 3 chars minimum 5 chars</li>
+      <li>maximum 10 chars</li>
+      <li>should be valid email</li>
+      <li>valid indian mobile format with country code</li>
+    </ul>
+    <form onsubmit="return isFormValid();">
+      <div class="container">
+        <div class="formWrapper">
+          <label for="firstName" class="form-element font18">First name</label>
+          <input id="firstName" class="form-element font18" name="firstName" />
+
+          <label for="lastName" class="form-element font18">Last name</label>
+          <input id="lastName" class="form-element font18" name="lastName" />
+
+          <label for="emailAddress" class="form-element font18"
+            >Email address</label
+          >
+          <input
+            id="emailAddress"
+            class="form-element font18"
+            name="emailAddress"
+          />
+
+          <label for="mobileNumber" class="form-element font18"
+            >Mobile number</label
+          >
+          <input
+            id="mobileNumber"
+            class="form-element font18"
+            name="mobileNumber"
+          />
+
+          <label for="gender" class="form-element font18">Gender</label>
+          <select id="gender" class="form-element font18" name="gender">
+            <option>-- Select --</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+        <button class="font18">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

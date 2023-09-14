@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script></script>
+    <style>
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+    <script src="day3-calculator.js"></script>
+  </head>
+  <body>
+    <div style="border: 1px solid red; width: 400px">
+      <input id="result" type="text" placeholder="Enter number"/>
+      <button onclick="clearResult()">Clear</button>
+
+      <div>
+        <button id="one" onclick="handleNumberClick(this)">1</button>
+        <button id="two" onclick="handleNumberClick(this)">2</button>
+        <button id="three" onclick="handleNumberClick(this)">3</button>
+        <button id="plus" onclick="handlePlusClick(this)">+</button>
+      </div>
+
+      <div>
+        <button onclick="handleNumberClick(this)">4</button>
+        <button onclick="handleNumberClick(this)">5</button>
+        <button onclick="handleNumberClick(this)">6</button>
+        <button>-</button>
+      </div>
+
+      <div>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>*</button>
+      </div>
+      <div>
+        <button>0</button>
+        <button onclick="showResult()">=</button>
+        <button>.</button>
+        <button>/</button>
+      </div>
+    </div>
+  </body>
+</html>

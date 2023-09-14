@@ -1,0 +1,22 @@
+
+
+nav {
+    background-color: #8cc099;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navMenus ul {
+    display: flex;
+}
+
+.navMenus ul li {
+    margin: 20px;
+    list-style: none;
+    padding: 5px;
+}
+
+.navMenus ul li:hover {
+    background-color: red;
+}

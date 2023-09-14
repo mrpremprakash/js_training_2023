@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .alignCenter {
+        text-align: center;
+      }
+      .form-wrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+      .form-element {
+        margin: 10px;
+      }
+      .container {
+        width: 500px;
+        margin: auto;
+      }
+    </style>
+    <script>
+        function handleSubmit(event) {
+            console.log(this);
+            
+            return false;
+            
+        }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="alignCenter">
+        <h1>Registration</h1>
+
+        <form onsubmit="return handleSubmit();">
+          <div class="form-wrapper">
+            <label class="form-element">First name</label>
+            <input id="firstName" class="form-element"/>
+
+            <label class="form-element">Last name</label>
+            <input id="lastName" class="form-element"/>
+
+            <label class="form-element">Email address</label>
+            <input id="emailAddress" class="form-element"/>
+
+            <label class="form-element">Mobile number</label>
+            <input id="mobileNumber" class="form-element" />
+
+            <label class="form-element">Gender</label>
+            <select class="form-element">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JS basics</title>
+
+    <script>
+      const colors = ["red", "black", "green"];
+      // console.log(colors);
+      function changeColor(colorCode) {
+        const pElements = document.getElementsByTagName("p");
+        const pElement = pElements[0];
+        pElement.style.color = colorCode;
+
+        document.body.style["background-image"] = "url('bg-image.avif')";
+      }
+    </script>
+  </head>
+  <body>
+    <p class="first">Learn JS basics</p>
+    <p class="second">Learn JS basics</p>
+
+    <button onclick="changeColor('#FFFF00')">Red</button>
+    <button onclick="changeColor('#FFC0CB')">Black</button>
+  </body>
+</html>

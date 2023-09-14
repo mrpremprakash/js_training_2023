@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .remove {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="generateList()">Generate users list</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>User Name</th>
+        </tr>
+      </thead>
+
+      <tbody id="userlist">
+        <tr onclick="removeTr()">
+          <td>Click me to remove</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      function removeTr() {
+        console.log("clicked");
+      }
+
+      function generateList() {
+        let users = ["User 1", "User 2", "User 3"];
+        let trs = "";
+        for (let index = 0; index < users.length; index++) {
+          trs = trs + "<tr ><td>" + users[index] + "<button class='remove'>Remove</button></td></tr>";
+        }
+        document.getElementById("userlist").innerHTML = trs;
+        // document.getElementsByClassName('remove')
+      }
+    </script>
+  </body>
+</html>

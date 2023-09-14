@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 1</title>
+
+    <script src="index.js"></script>
+    <script src="sum.js"></script>
+    <script src="day2.js"></script>
+
+    <script>
+
+        let firstValue, operationType;
+        function handleNumberClick(num) {
+            console.log(num);
+            finalValue = document.getElementById('result').value + num;
+            document.getElementById('result').value = finalValue;
+        }
+
+        function addBtnClickHandler(type) {
+            const firstValue = document.getElementById('result').value;
+            const operationType = type;
+            console.log(firstValue, type);
+            document.getElementById('result').value = "";
+        }
+
+        function addNumber(a, b, c) {
+            console.log( a + b + c);
+        }
+
+        addNumber(1, 2, 3);
+    </script>
+</head>
+<body>
+    <!-- <div>
+        Hello world
+    </div> -->
+    <!-- <button onclick="alert('hello')">Click</button>
+    <input onblur="alert('hello')"/> -->
+
+    <div>
+        <input id="result"/>
+    </div>
+    <div>
+        <button onclick="handleNumberClick('1')">1</button>
+        <button onclick="handleNumberClick('2')">2</button>
+        <button onclick="handleNumberClick('3')">3</button>
+        <button onclick="addBtnClickHandler('plus')">+</button>
+    </div>
+    <div>
+        <button onclick="handleNumberClick('4')">4</button>
+        <button onclick="handleNumberClick('5')">5</button>
+        <button onclick="handleNumberClick('6')">6</button>
+        <button onclick="addBtnClickHandler('plus')">-</button>
+    </div>
+    <div>
+        <button onclick="handleNumberClick('7')">7</button>
+        <button onclick="handleNumberClick('8')">8</button>
+        <button onclick="handleNumberClick('9')">9</button>
+        <button>*</button>
+    </div>
+    <div>
+        <button onclick="handleNumberClick('0')">0</button>
+        
+        
+        <button onclick="showResult()">=</button>
+    </div>
+     <script>
+        
+    </script>
+</body>
+</html>
